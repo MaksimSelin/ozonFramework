@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.appline.ozon.entuty.entityList.ProductList;
 
+import static ru.appline.ozon.utils.StaticField.PATH_CHROME_DRIVER;
+
 /**
  * Менеджер драйвера
  */
@@ -17,7 +19,7 @@ public class DriverManager {
 
     public static WebDriver getDriver(){
         if (driver == null){
-            System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", PATH_CHROME_DRIVER);
             driver = new ChromeDriver();
         }
         return driver;
